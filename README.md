@@ -12,7 +12,7 @@ This project helped me to demonstrate my SQL skills and techniques typically use
 3. Exploratory Data Analysis (EDA): Perform basic exploratory data analysis to understand the dataset.
 4. Business Analysis: Use SQL to answer specific business questions and derive insights from the sales data.
 ## Project Structure
-### Database Setup
+### 1. Database Setup
 Database Creation:
 The project starts by creating a database named RetailSales
 
@@ -44,3 +44,68 @@ Record Count: Determine the total number of records in the dataset.
 Customer Count: Find out how many unique customers are in the dataset.
 Category Count: Identify all unique product categories in the dataset.
 Null Value Check: Check for any null values in the dataset and delete records with missing data.
+```sql
+--To view the 10 records
+SELECT * FROM retail_sales
+LIMIT 10
+
+--Get the count of the records in the retail_sales
+SELECT 
+    COUNT(*) 
+FROM retail_sales
+
+--Data cleaning - selecting and deleting the null records
+
+SELECT * FROM retail_sales
+WHERE 
+    transaction_id IS NULL
+    OR
+    sale_date IS NULL
+    OR 
+    sale_time IS NULL
+    OR
+    gender IS NULL
+    OR
+    category IS NULL
+    OR
+    quantity IS NULL
+    OR
+    cogs IS NULL
+    OR
+    total_sale IS NULL;
+
+
+DELETE FROM retail_sales
+WHERE 
+    transaction_id IS NULL
+    OR
+    sale_date IS NULL
+    OR 
+    sale_time IS NULL
+    OR
+    gender IS NULL
+    OR
+    category IS NULL
+    OR
+    quantity IS NULL
+    OR
+    cogs IS NULL
+    OR
+    total_sale IS NULL;
+
+
+-- Data Exploration
+
+-- How many sales do we have?
+select count(*) as Totalsale from retail_sales;
+
+-- How many unique customers do we have?
+select count(distinct customer_id) from retail_sales;
+
+-- How many categories do we have?
+select distinct category from retail_sales;
+
+select count(distinct category) from retail_sales;
+select distinct category from retail_sales;
+
+```
