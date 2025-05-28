@@ -189,7 +189,7 @@ select customer_id,sum(total_sale)as totsales from retail_sales group by custome
 ```sql
 select category,count(distinct customer_id) from retail_sales group by category;
 ```
-***10. Write a sql query to create each shift and number of orders ( Example Morning <12, Afternoon between 12 & 17,Evening>17 )
+10.**Write a sql query to create each shift and number of orders ( Example Morning <12, Afternoon between 12 & 17,Evening>17 )
 
 ```sql
 
