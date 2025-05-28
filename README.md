@@ -1,6 +1,6 @@
 # Sales-Analysis-Sql-project
 Retail Sales Analysis
-##Project Overview:
+## roject Overview:
 Project Title: Retail Sales Analysis
 
 Database: RetailSales
