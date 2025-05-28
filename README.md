@@ -199,4 +199,10 @@ case when extract(hour from sale_time) < 12 then 'Morning'
 end as shift,count(*) as number_of_orders
 from retail_sales group by shift;
 ```
+## Findings
+* Customer Demographics: The dataset includes customers from various age groups, with sales distributed across different categories such as Clothing and Beauty.
+* High-Value Transactions: Several transactions had a total sale amount greater than 1000, indicating premium purchases.
+* Sales Trends: Monthly analysis shows variations in sales, helping identify peak seasons.
+* Customer Insights: The analysis identifies the top-spending customers and the most popular product categories.
+
 #### End of project
